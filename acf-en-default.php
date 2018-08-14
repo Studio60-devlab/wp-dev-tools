@@ -7,7 +7,7 @@
  *
  * 
  * Copyright 2018 - theStudio60
- * https://github.com/Studio60-devlab
+ * https://github.com/theStudio60/wp-dev-tools/
  *
  */
  
