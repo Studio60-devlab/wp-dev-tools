@@ -1,13 +1,13 @@
 /**
  * acf-fr-default.php
  *
- * "Default French ACF fields.""
+ * "Default French ACF fields."
  *
- * Can be added to "functions.php"
+ * Can be added to functions.php
  *
  * 
  * Copyright 2018 - theStudio60
- * https://github.com/Studio60-devlab
+ * https://github.com/theStudio60/wp-dev-tools/
  *
  */
 
