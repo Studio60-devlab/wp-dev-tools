@@ -1,3 +1,4 @@
 # wp-dev-tools
+TheStudio60 webdev laboratory
 
-Some tools, codes and snippets for wp dev
+Some pieces of code we use for wordpress development
