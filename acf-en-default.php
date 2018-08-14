@@ -1,9 +1,9 @@
 /**
  * acf-en-default.php
  *
- * "Default English ACF fields.""
+ * "Default English ACF fields."
  *
- * Can be added to "functions.php"
+ * Can be added to functions.php
  *
  * 
  * Copyright 2018 - theStudio60
