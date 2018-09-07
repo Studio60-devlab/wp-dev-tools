@@ -1,4 +1,4 @@
-# wp-dev-tools
+# webdev-tools
 TheStudio60 webdev laboratory
 
 Some pieces of code we use for wordpress development
