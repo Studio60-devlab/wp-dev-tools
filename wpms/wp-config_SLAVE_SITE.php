@@ -1,11 +1,4 @@
 <?php
-/**
- * wp-config.php of website of studio60 local wp multi-site environment 
- * SETUP : uncomment line $table_prefix & replace REPLACE-ME with the name of your site.
- * Ex: $table_prefix  = 'wp_mysuperwebsite_';
- * Then, of course, rename this file to wp-config.php
- * 
- */
 define('DB_NAME', 'wpmsdb');
 define('DB_USER', 'admin');
 define('DB_PASSWORD', 'admin');
@@ -20,7 +13,7 @@ define('AUTH_SALT',        'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
-//$table_prefix  = 'wp_REPLACE-ME_';
+$table_prefix  = 'wp_REPLACE-ME_';
 define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
