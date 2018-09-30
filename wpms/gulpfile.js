@@ -23,7 +23,7 @@ gulp.task('css', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(csso())
-        .pipe(gulp.dest('./app'));
+        .pipe(gulp.dest('./app/'));
 });
 
 gulp.task('css-watch', ['css'], function (done) {
@@ -42,7 +42,7 @@ gulp.task('js', function() {
         './src/js/main.js'
     ])
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./app'));
+    .pipe(gulp.dest('./app/'));
 });
 
 gulp.task('js-watch', ['js'], function (done) {
