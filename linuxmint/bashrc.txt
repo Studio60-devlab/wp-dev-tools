@@ -8,13 +8,19 @@ LOCALHOST_APACHE_ADDRESS=$(echo $LOCALHOST$APACHE_PORT)
 WEB_LAB_DIR=$(echo /var/www/html)
 
 
-alias now="(echo $NOW)"
+# List, separated by spaces, of BleachBit cleaners
+BLEACHBIT_GENERAL_CLEANERS="bash.history system.cache system.clipboard deepscan.ds_store deepscan.tmp deepscan.thumbs_db system.custom system.recent_documents system.rotated_logs system.tmp system.trash thumbnails.cache"
+#BLEACHBIT_FIREFOX_CLEANERS==$(echo 'firefox.cache firefox.cookies firefox.dom firefox.download_history firefox.forms firefox.passwords firefox.session_restore firefox.url_history firefox.vacuum')
 
-alias gotolab=' cd ${WEB_LAB_DIR} && ls' 
+#devlab aliases
+alias now='(echo $NOW)'
+alias gotolab='cd ${WEB_LAB_DIR} && clear && ls && pwd' 
+#   ————————————utils
+alias cleanupDS='find . -type f -name '*.DS_Store' -ls -delete'
+alias cleanupDSasroot='sudo find . -type f -name '*.DS_Store' -ls -delete '
 
-
-#   ————————————alias
-
+alias cleanup='cleanupDSasroot ; sudo bleachbit -o -c $BLEACHBIT_GENERAL_CLEANERS >/dev/null'
+#alias cleanFirefox='cleanupDSasroot ; sudo bleachbit -o -c $BLEACHBIT_FIREFOX_CLEANERS >/dev/null'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -27,7 +33,7 @@ alias less='less -FSRXc'                    # Preferred 'less' implementation
 cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
-alias f='open -a nemo ./'                 # f: Opens current directory in MacOS Finder
+alias f='nemo ./'                   # f: Opens current directory nemo
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
 alias which='type -all'                     # which:        Find executables
@@ -43,19 +49,10 @@ alias top="htop -C "
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
-
-#   ---------------------------------------
-#   7. SYSTEMS OPERATIONS & INFORMATION
-#   ---------------------------------------
-#	Archive
-#
-# zipf:To create a ZIP archive of a folder
+#   zipf:To create a ZIP archive of a folder
 zipf () { zip -r "$1".zip "$1" ; } 
 #
-#
-#
 #   extract:  Extract most know archives with one command
-#   ---------------------------------------------------------
     extract () {
         if [ -f $1 ] ; then
           case $1 in
