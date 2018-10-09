@@ -2,8 +2,10 @@
 #developpeur web sur linux mint
 #theStudio60 - fdlab
 #
-
 cd ~/; 
+curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/linuxmint/bashrc.txt > .bashrc && 
+source ~/.bashrc
+
 mkdir STUDIO60/PREPROD
 mkdir STUDIO60/HUGO
 mkdir STUDIO60/WP/DEV
