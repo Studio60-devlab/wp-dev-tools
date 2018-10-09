@@ -1,5 +1,13 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-#made for linux mint 18.2
+# copyright 2018
+# author : fabd (@theStudio60) 
+# description : .bashrc linux mint 18.2 web dev lab
+#
+# author_url :https://github.com/fd-lab
+#
+# author_url :https://github.com/theStudio60
+# author page :https://studio60.tumblr.com/
+#
 NOW=$(date +.%d_%h_%Y-%H%M%S)
 LOCALHOST=$(echo '127.0.0.1:')
 APACHE_PORT=$(cat /etc/apache2/ports.conf | grep ^Listen | tr -d [A-Z][a-z][:space:] | cat)
