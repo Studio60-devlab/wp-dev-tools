@@ -1,23 +1,19 @@
 #Script d'installation d'environnement
-#developpeur web sur linux mint
+#dev web sur ubuntu et mint
 #theStudio60 - fdlab
 #
-cd ~/; 
+cd ~/;
+clear;
+echo 'theStudio60 - DevLab setup';sleep 3; 
+clear;
 curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/linuxmint/bashrc.txt > .bashrc && 
 source ~/.bashrc
-
 mkdir STUDIO60/PREPROD
 mkdir STUDIO60/HUGO
 mkdir STUDIO60/WP/DEV
 mkdir STUDIO60/WP/STAGE
 mkdir STUDIO60/RESOURCES
 mkdir STUDIO60/VECTORS
-
-
-clear;
-echo 'theStudio60 - linux mint setup';sleep 3; 
-clear
-
 echo
 sudo apt-get update &&
 clear ;
