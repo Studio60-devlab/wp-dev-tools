@@ -4,16 +4,23 @@
 # description : .bashrc linux mint 18.2 web dev lab
 #
 # author_url :https://github.com/fd-lab
-#
 # author_url :https://github.com/theStudio60
 # author page :https://studio60.tumblr.com/
-#
 NOW=$(date +.%d_%h_%Y-%H%M%S)
 LOCALHOST=$(echo '127.0.0.1:')
 APACHE_PORT=$(cat /etc/apache2/ports.conf | grep ^Listen | tr -d [A-Z][a-z][:space:] | cat)
 LOCALHOST_APACHE_ADDRESS=$(echo $LOCALHOST$APACHE_PORT)
 
-WEB_LAB_DIR=$(echo /var/www/html)
+#WEB_LAB_DIR=$(echo /var/www/html)
+LAB_DIR=$(echo ~/STUDIO60/)
+#
+#wordpress
+WP_LAB_DIR=$(echo ~/STUDIO60/WP)
+WP_LAB_PROJECTS_DIR=$(echo ~/STUDIO60/WP/PROJECTS)
+alias 60_GOTOLAB='cd ${LAB_DIR} ; clear ;echo 'STUDIO60';pwd ;echo 'Dev_LAB' ; ls'
+alias 60_WordpressLab='cd ${WP_LAB_DIR} ; clear ; echo 'STUDIO60';pwd ;echo 'Dev_LAB.Wordpress' ; ls'
+alias 60_WordpressProjects='cd ${WP_LAB_PROJECTS_DIR}; clear ; echo 'STUDIO60';pwd ;echo 'Dev_LAB.Wordpress.Projects' ; ls'
+
 
 
 # List, separated by spaces, of BleachBit cleaners
