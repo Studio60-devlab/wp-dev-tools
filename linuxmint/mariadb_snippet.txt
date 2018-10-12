@@ -1,0 +1,13 @@
+Commandes bash pour mariadb 
+
+effacer database :
+mysql -u root -p  -e "DROP DATABASE IF EXISTS database;"
+
+créer database :
+mysql -u root -p  -e "CREATE DATABASE IF NOT EXISTS database;"
+
+voir version :
+mysql --version
+
+changer mot de passe :
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_password');
