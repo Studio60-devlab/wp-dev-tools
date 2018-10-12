@@ -16,12 +16,10 @@ LAB_DIR=$(echo ~/STUDIO60/)
 #
 #wordpress
 WP_LAB_DIR=$(echo ~/STUDIO60/WP)
-WP_LAB_PROJECTS_DIR=$(echo ~/STUDIO60/WP/PROJECTS)
+WP_LAB_PROJECTS_DIR=$(echo /var/www/html/WP/PROJECTS)
 alias 60_GOTOLAB='cd ${LAB_DIR} ; clear ;echo 'STUDIO60';pwd ;echo 'Dev_LAB' ; ls'
 alias 60_WordpressLab='cd ${WP_LAB_DIR} ; clear ; echo 'STUDIO60';pwd ;echo 'Dev_LAB.Wordpress' ; ls'
 alias 60_WordpressProjects='cd ${WP_LAB_PROJECTS_DIR}; clear ; echo 'STUDIO60';pwd ;echo 'Dev_LAB.Wordpress.Projects' ; ls'
-
-
 
 # List, separated by spaces, of BleachBit cleaners
 BLEACHBIT_GENERAL_CLEANERS="bash.history system.cache system.clipboard deepscan.ds_store deepscan.tmp deepscan.thumbs_db system.custom system.recent_documents system.rotated_logs system.tmp system.trash thumbnails.cache"
