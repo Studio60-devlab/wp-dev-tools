@@ -1,9 +1,8 @@
-#Avant d'utiliser ce script comme un barbare
-
-
+#Avant d'utiliser ce script comme un barbare:
 #il faut le mettre dans /var/www/html/WP/
-#
-#
+#et le lancer comme ceci : 
+#cd /var/www/html/WP && ./wp-install.sh -start
+
 TIME=$(date +%d%h%Y%H%M%S)
 LOCALHOST=$(echo '127.0.0.1:')
 APACHE_PORT=$(cat /etc/apache2/ports.conf | grep ^Listen | tr -d [A-Z][a-z][:space:] | cat)
