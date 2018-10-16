@@ -20,7 +20,7 @@ WP_LAB_PROJECTS_DIR=$(echo /var/www/html/WP/PROJECTS)
 alias 60_GOTOLAB='cd ${LAB_DIR} ; clear ;echo 'STUDIO60';pwd ;echo 'Dev_LAB' ; ls'
 alias 60_WordpressLab='cd ${WP_LAB_DIR} ; clear ; echo 'STUDIO60';pwd ;echo 'Dev_LAB.Wordpress' ; ls'
 alias 60_WordpressProjects='cd ${WP_LAB_PROJECTS_DIR}; clear ; echo 'STUDIO60';pwd ;echo 'Dev_LAB.Wordpress.Projects' ; ls'
-
+alias 60_WordpressNewProject='$WP_LAB_DIR/SCRIPTS/wp-new.sh '
 # List, separated by spaces, of BleachBit cleaners
 BLEACHBIT_GENERAL_CLEANERS="bash.history system.cache system.clipboard deepscan.ds_store deepscan.tmp deepscan.thumbs_db system.custom system.recent_documents system.rotated_logs system.tmp system.trash thumbnails.cache"
 #BLEACHBIT_FIREFOX_CLEANERS==$(echo 'firefox.cache firefox.cookies firefox.dom firefox.download_history firefox.forms firefox.passwords firefox.session_restore firefox.url_history firefox.vacuum')
