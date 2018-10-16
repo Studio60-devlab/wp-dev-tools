@@ -1,7 +1,7 @@
 # theStudio60
-# webdev-tools
+*webdev-tools*
 
-**Linux Lab Studio60**
+**Pour configurer Linux:**
 
 **1:** *Installer linux-mint-64(18.2)*
 
