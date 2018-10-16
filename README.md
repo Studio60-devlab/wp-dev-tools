@@ -5,7 +5,7 @@ Ici se trouve la base du lab Studio60
 #Etape 1 :
 Installer linux-mint-64(18.2)
 
-#```dans un terminal :
-
-
-```
+#Etape 2 :
+#code#
+ un terminal :
+#code#
