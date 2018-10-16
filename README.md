@@ -3,9 +3,9 @@ TheStudio60 webdev-tools
 Ici se trouve la base du lab Studio60
 
 **Linux Lab Studio60**
-###1 : ###
+### 1 :
 Installer linux-mint-64(18.2)
-###2 : ###
+### 2 :
 
 dans un terminal :
 ```
