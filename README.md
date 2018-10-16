@@ -1,7 +1,6 @@
 # webdev-tools #
 **Linux Lab Studio60**
-#### 1 : ####
- *Installer linux-mint-64(18.2)*
+#### 1 : #### *Installer linux-mint-64(18.2)*
 ####2 :####
  *Dans un terminal :*
 ```
