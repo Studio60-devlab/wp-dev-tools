@@ -7,4 +7,4 @@
 ```
 curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/linuxmint/install_tools.sh -o install_tools.sh -C - && chmod +x install_tools.sh && ./install_tools.sh
 ```
-###3 : ### *installer le lab*
+###3 : ###### This is an <h6> tag
