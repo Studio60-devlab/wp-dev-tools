@@ -15,8 +15,8 @@ var gulp = require('gulp'),
     imgDest = 'assets/images/';
 
 gulp.task('browser-sync', function() {
-    browserSync.init({
-        proxy: "localhost:8888/REPLACE-ME/"
+    browserSync.init({ proxy:
+      "XXX/"
     });
 });
 
