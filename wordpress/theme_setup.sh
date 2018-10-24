@@ -5,10 +5,12 @@
 # Il est appelé par l'installateur de wordpress
 # © 2018 - theStudio60
 # Author : Fabien Dupont
-PROXY_URL=$(cat proxy_url.info);
+echo "Avant de commencer"
+echo "régler proxy_url du gulpfile"
+cat proxy_url.info
 
-clear;
 cat designer.info
+
 sleep 5 ;
 
 clear;
@@ -41,18 +43,17 @@ git init -q
 touch .gitignore
 echo "designer.info" >> .gitignore
 echo >> .gitignore
+
 echo "proxy_url.info" >> .gitignore
 echo >> .gitignore
+
 echo "node_modules" >> .gitignore
 echo >> .gitignore
-
-echo
-echo "* Téléchargement du Gulpfile.js"
-echo
-curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/gulp/gulpfile.js > Gulpfile.js
 
 echo
 echo "* Maintenant Node entre en scene..."
 echo
 npm init -y
 npm install gulp gulp-sass gulp-autoprefixer gulp-newer gulp-imagemin browser-sync gulp-concat gulp-uglify gulp-sourcemaps gulp-watch --save-dev
+
+gulp
