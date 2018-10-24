@@ -5,8 +5,14 @@
 # Il est appelé par l'installateur de wordpress
 # © 2018 - theStudio60
 # Author : Fabien Dupont
-mkdir trash/
+git init -q
+npm init -y
 
+mkdir trash/
 mv LICENSE trash/
 mv README.md trash/
 mv readme.txt trash/
+
+
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/gulp/gulpfile.js > gulpfile.js
+npm install gulp gulp-sass gulp-autoprefixer gulp-newer gulp-imagemin browser-sync gulp-concat gulp-uglify gulp-sourcemaps gulp-watch --save-dev
