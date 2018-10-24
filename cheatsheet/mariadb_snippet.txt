@@ -1,5 +1,8 @@
 Commandes bash pour mariadb 
 
+lister les databases
+mysql -u root -p  -e “SHOW DATABASES;”
+
 effacer database :
 mysql -u root -p  -e "DROP DATABASE IF EXISTS database;"
 
