@@ -47,7 +47,7 @@ echo >> .gitignore
 echo
 echo "* Téléchargement du Gulpfile.js"
 echo
-curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/gulp/Gulpfile.js > Gulpfile.js
+curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/gulp/gulpfile.js > Gulpfile.js
 
 echo
 echo "* Maintenant Node entre en scene..."
