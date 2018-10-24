@@ -9,12 +9,36 @@ clear;
 cat designer.info
 sleep 5 ;
 
+clear;
+
+mkdir assets/
+
+mkdir assets/images/
+mkdir assets/images/original/
+
+mkdir assets/js/
+mkdir assets/js/dev/
+mkdir assets/js/dist/
+
+mkdir assets/sass/
+mkdir assets/sass/_partials/
+
+touch assets/sass/style.scss
+
+
 mkdir trash/
   mv LICENSE trash/
   mv README.md trash/
   mv readme.txt trash/
 
-clear;
+  mv sass/ trash/
+  mv layouts/ trash/
+  mv js/ trash/
+
+git init -q
+touch .gitignore
+echo "node_modules" >> .gitignore
+echo >> .gitignore
 
 echo
 echo "* Maintenant Node entre en scene..."
