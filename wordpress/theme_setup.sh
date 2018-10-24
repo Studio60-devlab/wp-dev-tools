@@ -41,6 +41,8 @@ git init -q
 touch .gitignore
 echo "designer.info" >> .gitignore
 echo >> .gitignore
+echo "proxy_url.info" >> .gitignore
+echo >> .gitignore
 echo "node_modules" >> .gitignore
 echo >> .gitignore
 
