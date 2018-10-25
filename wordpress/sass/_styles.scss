@@ -1,0 +1,30 @@
+/*
+* Table of contents
+*
+* +General stuff
+* +Google maps
+*/
+
+/*
+* +General stuff
+*/
+body {
+    padding-top: 60px;
+
+    @media (min-width: $screen-md-min) {
+        padding-top: 80px;
+    }
+}
+
+.section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/*
+* +Google maps
+*/
+.map {
+    width: 100%;
+    height: 400px;
+}

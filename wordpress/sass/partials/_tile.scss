@@ -1,0 +1,46 @@
+/*
+* +Tiles
+*/
+.tile {
+    position: relative;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &__image-wrap {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 77% 0 0 0;
+        margin-bottom: .5em;
+    }
+
+    &__image {
+        display: block;
+        background-size: cover;
+        background-position: center;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__content {
+        padding: 0 15px;
+    }
+
+    &__title {
+        color: $gray-dark;
+    }
+
+    &__subtitle {
+        color: $gray-light;
+        font-size: 13px;
+    }
+}

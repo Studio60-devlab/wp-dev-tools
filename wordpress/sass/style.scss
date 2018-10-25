@@ -1,0 +1,41 @@
+/*!
+Theme Name: studio60-theme
+Theme URI: https://github.com/theStudio60
+Description: Theme Wordpress créé par Studio60
+Author: Fabien Dupont
+Version: 0.1
+*/
+
+/**
+ * General styles
+ */
+@import "variables";
+@import "base";
+@import "styles";
+
+/**
+ * Layout styles
+ */
+@import "layout/header";
+@import "layout/menu";
+@import "layout/footer";
+
+/**
+ * Partials
+ */
+//@import "partials/tile";
+@import "partials/hero";
+@import "partials/btn";
+
+/**
+ * Flex contents
+ */
+@import "flex/content";
+@import "flex/cta";
+@import "flex/gallery";
+@import "flex/video";
+
+/**
+ * Vendor
+ */
+@import "../../node_modules/magnific-popup/dist/magnific-popup";

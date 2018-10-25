@@ -1,0 +1,232 @@
+.header {
+    font-weight: 300;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        height: 60px;
+
+        @media (min-width: $screen-md-min) {
+            height: 80px;
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__menu {
+        display: none;
+        padding: 0;
+
+        // visible on desktop
+        @media (min-width: $screen-md-min) {
+            display: block;
+        }
+
+        > ul {
+            display: flex;
+        }
+
+        a {
+            color: #000;
+            user-select: none;
+            font-size: 16px;
+        }
+
+        .current-menu-item a,
+        a:hover {
+            color: $brand-primary;
+        }
+
+        li {
+            padding: 0 20px;
+        }
+
+        .menu-item-has-children {
+            position: relative;
+
+            &:hover {
+                > .header__submenu {
+                    display: block;
+                }
+
+                > a {
+                    color: $brand-primary;
+                }
+            }
+        }
+
+        .header__submenu {
+            display: none;
+            position: absolute;
+            top: 22px;
+            left: 0;
+            background-color: #fff;
+            list-style-type: none;
+            margin: 0;
+            padding: 30px 20px 0;
+
+            li {
+                display: block;
+                padding: 8px 0;
+                line-height: 1.1;
+            }
+
+            .current-menu-item a,
+            a:hover {
+                color: $brand-primary;
+            }
+
+            a {
+                color: #222;
+                white-space: nowrap;
+                font-size: 14px;
+                display: block;
+            }
+        }
+    }
+
+    &__arrowdown {
+        display: inline;
+        fill: currentColor;
+        height: 6px;
+        top: -2px;
+        position: relative;
+        width: 10px;
+    }
+
+    &__burger {
+        cursor: pointer;
+
+        @media (min-width: $screen-md-min) {
+            display: none;
+        }
+
+        i {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: $brand-primary;
+            border-radius: 2px;
+
+            + i {
+                margin-top: 3px;
+            }
+        }
+    }
+
+    /**
+     * WPML language selector, if needed
+     */
+    &__lang {
+        position: relative;
+        color: #222;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        /**
+         * Selector visible for smartphone
+         */
+        @media (max-width: $screen-sm-max) {
+            display: none;
+
+            &--visible {
+                display: block;
+                position: fixed;
+                bottom: 15px;
+                right: 15px;
+                z-index: 16;
+
+                .header__submenu {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 18px;
+
+                    > li {
+                        display: inline-block;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+
+        /**
+         * Selector visible for desktop
+         */
+        @media (min-width: $screen-md-min) {
+            .header__submenu {
+                display: none;
+                position: absolute;
+                top: 22px;
+                left: 0;
+                background-color: #fff;
+                list-style-type: none;
+                margin: 0;
+                padding: 30px 20px 0;
+
+                li {
+                    display: block;
+                    padding: 8px 0;
+                    line-height: 1.1;
+                }
+
+                a {
+                    color: #222;
+                    white-space: nowrap;
+                    font-size: 14px;
+                    display: block;
+
+                    &:hover {
+                        color: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    &__current-lang {
+        @media (max-width: $screen-md-max) {
+            > a {
+                display: none;
+            }
+        }
+
+        @media (min-width: $screen-md-min) {
+            padding: 0 20px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+
+            > a {
+                color: currentColor;
+                display: block;
+                height: 20px;
+            }
+
+            &:hover {
+                > .header__submenu {
+                    display: block;
+                }
+
+                > a {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.btn {
+    display: inline-block;
+    color: $brand-primary;
+    background-color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 8px 16px;
+    line-height: 1.5;
+    letter-spacing: .8px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid $brand-primary;
+    border-radius: 3px;
+    outline: 0;
+    transition: background-color .3s ease, color .35s ease;
+
+    &:focus,
+    &:hover {
+        color: #fff;
+        background-color: $brand-primary;
+        text-decoration: none;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    &--inverse {
+        color: #fff;
+        background-color: $brand-primary;
+
+        &:focus,
+        &:hover {
+            background: transparent;
+            color: $brand-primary;
+            border-color: $brand-primary;
+        }
+    }
+
+    &--fullwidth {
+        width: 100%;
+    }
+
+    &--big {
+        font-size: 18px;
+        padding: 8px 24px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    &--small {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    &--loading {
+        &::after {
+            content: "";
+            display: inline-block;
+            width: .8em;
+            height: .8em;
+            margin-left: 5px;
+            border: 2px solid currentColor;
+            border-bottom: 2px solid transparent;
+            border-radius: 50%;
+            animation: fa-spin 1s infinite linear;
+        }
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}

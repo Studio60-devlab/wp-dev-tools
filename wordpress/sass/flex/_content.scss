@@ -1,0 +1,39 @@
+.content {
+
+    @media (min-width: $screen-sm-min) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &--inverse {
+            flex-direction: row-reverse;
+        }
+
+        &--fullpage {
+            flex-direction: column;
+            text-align: center;
+
+            .content__text {
+                width: 100%;
+            }
+
+            .content__image {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__text {
+        @media (min-width: $screen-sm-min) {
+            width: 48%;
+        }
+    }
+
+    &__image {
+        @media (min-width: $screen-sm-min) {
+            width: 48%;
+        }
+    }
+}

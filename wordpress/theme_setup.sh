@@ -38,6 +38,7 @@ mkdir trash/
   mv sass/ trash/
   mv layouts/ trash/
   mv js/ trash/
+  
 
 git init -q
 touch .gitignore
