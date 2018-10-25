@@ -29,7 +29,7 @@ mkdir assets/sass/_partials/
 
 touch assets/sass/style.scss
 
-curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/style.scss > assets/sass/style.scss
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/style.scss > assets/sass/style.scss
 
 mkdir trash/
   mv LICENSE trash/
@@ -46,9 +46,6 @@ touch .gitignore
 echo "designer.info" >> .gitignore
 echo >> .gitignore
 
-echo "proxy_url.info" >> .gitignore
-echo >> .gitignore
-
 echo "node_modules" >> .gitignore
 echo >> .gitignore
 
@@ -57,4 +54,6 @@ echo "* Maintenant Node entre en scene..."
 echo
 npm init -y
 npm install gulp gulp-sass gulp-autoprefixer gulp-newer gulp-imagemin browser-sync gulp-concat gulp-uglify gulp-sourcemaps gulp-watch --save-dev
-echo "taper gulp pour lancer le serveur dev"
+echo
+echo "* Taper gulp pour lancer le serveur dev"
+echo
