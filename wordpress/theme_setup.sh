@@ -29,6 +29,7 @@ mkdir assets/sass/_partials/
 
 touch assets/sass/style.scss
 
+curl https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/style.scss > assets/sass/style.scss
 
 mkdir trash/
   mv LICENSE trash/
@@ -38,7 +39,7 @@ mkdir trash/
   mv sass/ trash/
   mv layouts/ trash/
   mv js/ trash/
-  
+
 
 git init -q
 touch .gitignore
@@ -56,5 +57,4 @@ echo "* Maintenant Node entre en scene..."
 echo
 npm init -y
 npm install gulp gulp-sass gulp-autoprefixer gulp-newer gulp-imagemin browser-sync gulp-concat gulp-uglify gulp-sourcemaps gulp-watch --save-dev
-
-gulp
+echo "taper gulp pour lancer le serveur dev"
