@@ -1,4 +1,4 @@
-// studio60
+// studio60 -
 'use strict';
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
@@ -13,13 +13,11 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     imgSrc = 'assets/images/originals/*',
     imgDest = 'assets/images/';
-
 gulp.task('browser-sync', function() {
-    browserSync.init({
-      proxy:  "XXX/"
+    browserSync.init({  //proxy:  "/"
+
     });
 });
-
 gulp.task('sass', function () {
   return gulp.src('assets/sass/**/*.scss')
     .pipe(sourcemaps.init())
@@ -28,10 +26,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./'));
 });
-
-
 gulp.task('watch', function() {
-
     // Watch .scss files
     gulp.watch('assets/sass/*.scss', ['sass']).on("change", browserSync.reload);
     gulp.watch('assets/sass/**/*.scss', ['sass']).on("change", browserSync.reload);
@@ -40,24 +35,18 @@ gulp.task('watch', function() {
     // Watch original images directory
     gulp.watch(imgSrc, ['images']).on("change", browserSync.reload);
 });
-
 gulp.task('images', function() {
     return gulp.src(imgSrc, {base: 'assets/images/originals'})
       .pipe(newer(imgDest))
       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
       .pipe(gulp.dest(imgDest));
 });
-
-
 var jsInput = { js: 'assets/js/dev/**/*.js' }
 var jsOutput = 'assets/js/dist/';
-
 gulp.task('js', function(){
   return gulp.src(jsInput.js)
     .pipe(concat('app.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./assets/js/dist/'))
 });
-
-
 gulp.task('default',['sass', 'browser-sync','watch','images', 'js']);
