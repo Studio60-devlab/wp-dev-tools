@@ -1,8 +1,8 @@
-/*!
+/*! studio60 - https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/style.scss
 Theme Name: studio60-theme
 Theme URI: https://github.com/theStudio60
 Description: Theme Wordpress créé par Studio60
-Author: Fabien Dupont
+Author: Studio60
 Version: 0.1
 */
 
@@ -23,7 +23,7 @@ Version: 0.1
 /**
  * Partials
  */
-//@import "partials/tile";
+@import "partials/tile";
 @import "partials/hero";
 @import "partials/btn";
 
