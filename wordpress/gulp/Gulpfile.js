@@ -1,4 +1,4 @@
-// studio60 -
+// studio60 - https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/Gulpfile.js
 'use strict';
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
