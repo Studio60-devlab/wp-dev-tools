@@ -33,7 +33,7 @@
         display: none;
         padding: 0;
 
-        // visible on desktop
+        /** visible on desktop */
         @media (min-width: $screen-md-min) {
             display: block;
         }

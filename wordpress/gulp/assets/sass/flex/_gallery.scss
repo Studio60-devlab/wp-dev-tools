@@ -21,7 +21,7 @@
         display: block;
         width: 33.33%;
 
-        // ensure the ratio 16/9
+        /** ensure the ratio 16/9 */
         &:before {
             content: '';
             display: block;

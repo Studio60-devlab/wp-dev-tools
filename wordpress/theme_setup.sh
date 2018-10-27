@@ -62,7 +62,7 @@ echo
 echo "* Maintenant Node entre en scene..."
 echo
 npm init -y
-npm install gulp gulp-sass gulp-autoprefixer gulp-newer gulp-imagemin browser-sync gulp-concat gulp-uglify gulp-sourcemaps gulp-watch --save-dev
+npm install gulp gulp-sass gulp-autoprefixer gulp-newer gulp-imagemin browser-sync gulp-concat gulp-uglify gulp-sourcemaps gulp-watch bootstrap-sass --save-dev
 echo
 echo "* Taper gulp pour lancer le serveur dev"
 echo
