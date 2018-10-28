@@ -26,20 +26,16 @@ curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/_variables.scss > assets/sass/_variables.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/_styles.scss > assets/sass/_styles.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/_base.scss > assets/sass/_base.scss
-
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_content.scss > assets/sass/flex/_content.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_cta.scss > assets/sass/flex/_cta.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_gallery.scss > assets/sass/flex/_gallery.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_video.scss > assets/sass/flex/_video.scss
-
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/layout/_footer.scss > assets/sass/layout/_footer.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/layout/_header.scss > assets/sass/layout/_header.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/layout/_menu.scss > assets/sass/layout/_menu.scss
-
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/partials/_btn.scss > assets/sass/partials/_btn.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/partials/_hero.scss > assets/sass/partials/_hero.scss
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/partials/_tile.scss > assets/sass/partials/_tile.scss
-
 
 mkdir trash/
   mv LICENSE trash/
@@ -48,7 +44,7 @@ mkdir trash/
   mv sass/ trash/
   mv layouts/ trash/
   mv js/ trash/
-
+  mv woocommerce.css trash/
 
 git init -q
 touch .gitignore
