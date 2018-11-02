@@ -39,8 +39,8 @@ echo
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/gulpfile.js > gulpfile.js
 clear
 
-
-
+npm init -y
+npm install --save-dev gulp gulp-sass gulp-autoprefixer gulp-hash del
 git init -q
 touch .gitignore
 echo "designer.info" >> .gitignore
