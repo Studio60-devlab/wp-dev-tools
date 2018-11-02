@@ -6,38 +6,14 @@
 #
 ls
 
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/config.toml > config.toml
+
 touch archetypes/default.md
 
-echo "---" >> archetypes/default.md
-echo "" >>  archetypes/default.md
-echo "Author = \"Studio60\"" >> archetypes/default.md
-echo "Description = \"\"" >> archetypes/default.md
-echo "resources = []" >> archetypes/default.md
-echo "slug = \"\"" >> archetypes/default.md
-echo "" >>  archetypes/default.md
-echo "---" >> archetypes/default.md
+#mkdir layouts/_default
+#touch layouts/index.html
+#touch layouts/404.html
 
-mkdir layouts/_default
-touch layouts/index.html
-touch layouts/404.html
-
-echo "<!DOCTYPE html> " >> layouts/index.html
-echo "<html>" >> layouts/index.html
-echo "<title>{{ .Title }}</title>" >> layouts/index.html
-echo "<meta charset=\"UTF-8\">" >> layouts/index.html
-echo "<meta name=\"description\" content=\"{{ .Description }}\">" >> layouts/index.html
-echo "</head>" >> layouts/index.html
-echo "<body>" >> layouts/index.html
-echo "<main>" >> layouts/index.html
-echo "<article>" >> layouts/index.html
-echo "<h1>" >> layouts/index.html
-echo "{{ .Title }}" >> layouts/index.html
-echo "</h1>" >> layouts/index.html
-echo "{{ .Content }}" >> layouts/index.html
-echo "</article>" >> layouts/index.html
-echo "</main>" >> layouts/index.html
-echo "</body>" >> layouts/index.html
-echo "</html>" >> layouts/index.html
 
 git init -q
 touch .gitignore
@@ -53,6 +29,9 @@ echo "public/" >> .gitignore
 echo >> .gitignore
 echo "static/" >> .gitignore
 echo >> .gitignore
+
+
+
 #build :
 # gulp build
 # hugo
