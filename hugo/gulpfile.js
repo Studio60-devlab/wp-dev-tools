@@ -13,7 +13,7 @@ gulp.task("scss", function () {
     //effacement des vieux fichiers css eventuels
     del.sync(["static/css/**/*"]);
     //hash css Compilation
-    gulp.src("src/scss/**/*.scss")
+    gulp.src("assets/sass/**/*.scss")
         .pipe(sass({outputStyle : "compressed"}))
         .pipe(autoprefixer({browsers : ["last 20 versions"]}))
         .pipe(hash())
@@ -27,7 +27,7 @@ gulp.task("scss", function () {
 // Hash images compilation
 gulp.task("images", function () {
     del(["static/images/**/*"])
-    gulp.src("src/images/**/*")
+    gulp.src("assets/images/**/*")
         .pipe(hash())
         .pipe(gulp.dest("static/images"))
         .pipe(hash.manifest("hash.json"))
@@ -37,7 +37,7 @@ gulp.task("images", function () {
 // Hash javascript compilation
 gulp.task("js", function () {
     del(["static/js/**/*"])
-    gulp.src("src/js/**/*")
+    gulp.src("assets/js/**/*")
         .pipe(hash())
         .pipe(gulp.dest("static/js"))
         .pipe(hash.manifest("hash.json"))
@@ -46,9 +46,9 @@ gulp.task("js", function () {
 
 // Watch asset folder for changes
 gulp.task("watch", ["scss", "images", "js"], function () {
-    gulp.watch("src/scss/**/*", ["scss"]);
-    gulp.watch("src/images/**/*", ["images"]);
-    gulp.watch("src/js/**/*", ["js"]);
+    gulp.watch("assets/sass/**/*", ["scss"]);
+    gulp.watch("assets/images/**/*", ["images"]);
+    gulp.watch("assets/js/**/*", ["js"]);
 });
 
 gulp.task("build", () => {

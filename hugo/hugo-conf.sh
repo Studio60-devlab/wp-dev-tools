@@ -3,13 +3,10 @@
 # Ce script a été copié/téléchargé par l'installeur hugo-install.sh
 # © 2018 - theStudio60
 # Author : Fabien Dupont
-#
-mkdir layouts/_default
-mkdir layouts/partials
-mkdir src/
-mkdir src/scss
-mkdir src/images
-mkdir src/js
+mkdir -p layouts/{_default,partials}
+mkdir -p assets/{sass,js,images}
+
+touch assets/sass/main.scss
 
 echo "* téléchargement de config.toml"
 echo
@@ -65,5 +62,6 @@ echo >> .gitignore
 
 
 echo "build :"
+echo
 echo "gulp build"
 echo "hugo"
