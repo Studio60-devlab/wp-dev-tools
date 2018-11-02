@@ -40,7 +40,7 @@ curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/
 clear
 
 npm init -y
-npm install --save-dev gulp gulp-sass gulp-autoprefixer gulp-hash del
+npm install --save-dev gulp gulp-sass gulp-autoprefixer gulp-hash del run-sequence child_process rimraf
 git init -q
 touch .gitignore
 echo "designer.info" >> .gitignore
