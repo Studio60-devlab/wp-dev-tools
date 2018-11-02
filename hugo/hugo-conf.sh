@@ -6,6 +6,10 @@
 #
 mkdir layouts/_default
 mkdir layouts/partials
+mkdir src/
+mkdir src/scss
+mkdir src/images
+mkdir src/js
 
 echo "* téléchargement de config.toml"
 echo
