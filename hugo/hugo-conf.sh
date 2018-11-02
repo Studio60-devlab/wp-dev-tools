@@ -4,15 +4,41 @@
 # © 2018 - theStudio60
 # Author : Fabien Dupont
 #
-ls
+mkdir layouts/_default
+mkdir layouts/partials
 
+echo "* téléchargement de config.toml"
+echo
 curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/config.toml > config.toml
+clear
 
-touch archetypes/default.md
+echo "* téléchargement de archetypes_default.md"
+echo
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/archetypes/default.md > archetypes/default.md
+clear
 
-#mkdir layouts/_default
-#touch layouts/index.html
-#touch layouts/404.html
+
+echo "* téléchargement des layouts"
+echo
+touch layouts/404.html
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/index.html > layouts/index.html
+
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/_default/list.html > layouts/_default/list.html
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/_default/single.html > layouts/_default/single.html
+
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/partials/article.html > layouts/partials/article.html
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/partials/footer.html > layouts/partials/footer.html
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/partials/header.html > layouts/partials/header.html
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/partials/pagination.html > layouts/partials/pagination.html
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/partials/sidebar.html > layouts/partials/sidebar.html
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/layouts/partials/summary.html > layouts/partials/summary.html
+clear
+
+echo "* téléchargement de gulpfile.js"
+echo
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/hugo/gulpfile.js > gulpfile.js
+clear
+
 
 
 git init -q
@@ -30,8 +56,10 @@ echo >> .gitignore
 echo "static/" >> .gitignore
 echo >> .gitignore
 
+#npm goes here
 
 
-#build :
-# gulp build
-# hugo
+
+echo "build :"
+echo "gulp build"
+echo "hugo"
