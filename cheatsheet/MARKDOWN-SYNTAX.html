@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1404.47">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 6.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    li.li7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none; color: #0000ee; -webkit-text-stroke: 0px #0000ee}
+    span.s3 {font: 12.0px Courier; font-kerning: none}
+    span.s4 {-webkit-text-stroke: 0px #000000}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</span></p>
+<p class="p1"><span class="s1">Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters — including <a href="http://docutils.sourceforge.net/mirror/setext.html"><span class="s2">Setext</span></a>, <a href="http://www.aaronsw.com/2002/atx/"><span class="s2">atx</span></a>, <a href="http://textism.com/tools/textile/"><span class="s2">Textile</span></a>, <a href="http://docutils.sourceforge.net/rst.html"><span class="s2">reStructuredText</span></a>, <a href="http://www.triptico.com/software/grutatxt.html"><span class="s2">Grutatext</span></a>, and <a href="http://ettext.taint.org/doc/"><span class="s2">EtText</span></a> — the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.</span></p>
+<p class="p1"><span class="s1">To this end, Markdown’s syntax is comprised entirely of punctuation characters, which punctuation characters have been carefully chosen so as to look like what they mean. E.g., asterisks around a word actually look like *emphasis*. Markdown lists look like, well, lists. Even blockquotes look like quoted passages of text, assuming you’ve ever used email.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Inline HTML</b></span></h3>
+<p class="p1"><span class="s1">Markdown’s syntax is intended for one purpose: to be used as a format for <i>writing</i> for the web.</span></p>
+<p class="p1"><span class="s1">Markdown is not a replacement for HTML, or even close to it. Its syntax is very small, corresponding only to a very small subset of HTML tags. The idea is <i>not</i> to create a syntax that makes it easier to insert HTML tags. In my opinion, HTML tags are already easy to insert. The idea for Markdown is to make it easy to read, write, and edit prose. HTML is a <i>publishing</i> format; Markdown is a <i>writing</i> format. Thus, Markdown’s formatting syntax only addresses issues that can be conveyed in plain text.</span></p>
+<p class="p1"><span class="s1">For any markup that is not covered by Markdown’s syntax, you simply use HTML itself. There’s no need to preface it or delimit it to indicate that you’re switching from Markdown to HTML; you just use the tags.</span></p>
+<p class="p1"><span class="s1">The only restrictions are that block-level HTML elements — e.g. </span><span class="s3">&lt;div&gt;</span><span class="s1">, </span><span class="s3">&lt;table&gt;</span><span class="s1">, </span><span class="s3">&lt;pre&gt;</span><span class="s1">, </span><span class="s3">&lt;p&gt;</span><span class="s1">, etc. — must be separated from surrounding content by blank lines, and the start and end tags of the block should not be indented with tabs or spaces. Markdown is smart enough not to add extra (unwanted) </span><span class="s3">&lt;p&gt;</span><span class="s1"> tags around HTML block-level tags.</span></p>
+<p class="p1"><span class="s1">For example, to add an HTML table to a Markdown article:</span></p>
+<p class="p3"><span class="s1">This is a regular paragraph.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;table&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;td&gt;Foo&lt;/td&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;</span></p>
+<p class="p3"><span class="s1">&lt;/table&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">This is another regular paragraph.</span></p>
+<p class="p1"><span class="s1">Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can’t use Markdown-style </span><span class="s3">*emphasis*</span><span class="s1"> inside an HTML block.</span></p>
+<p class="p1"><span class="s1">Span-level HTML tags — e.g. </span><span class="s3">&lt;span&gt;</span><span class="s1">, </span><span class="s3">&lt;cite&gt;</span><span class="s1">, or </span><span class="s3">&lt;del&gt;</span><span class="s1"> — can be used anywhere in a Markdown paragraph, list item, or header. If you want, you can even use HTML tags instead of Markdown formatting; e.g. if you’d prefer to use HTML </span><span class="s3">&lt;a&gt;</span><span class="s1"> or </span><span class="s3">&lt;img&gt;</span><span class="s1"> tags instead of Markdown’s link or image syntax, go right ahead.</span></p>
+<p class="p1"><span class="s1">Unlike block-level HTML tags, Markdown syntax <i>is</i> processed within span-level tags.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Automatic Escaping for Special Characters</b></span></h3>
+<p class="p1"><span class="s1">In HTML, there are two characters that demand special treatment: </span><span class="s3">&lt;</span><span class="s1"> and </span><span class="s3">&amp;</span><span class="s1">. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. </span><span class="s3">&amp;lt;</span><span class="s1">, and </span><span class="s3">&amp;amp;</span><span class="s1">.</span></p>
+<p class="p1"><span class="s1">Ampersands in particular are bedeviling for web writers. If you want to write about ‘AT&amp;T’, you need to write ‘</span><span class="s3">AT&amp;amp;T</span><span class="s1">’. You even need to escape ampersands within URLs. Thus, if you want to link to:</span></p>
+<p class="p3"><span class="s1">http://images.google.com/images?num=30&amp;q=larry+bird</span></p>
+<p class="p1"><span class="s1">you need to encode the URL as:</span></p>
+<p class="p3"><span class="s1">http://images.google.com/images?num=30&amp;amp;q=larry+bird</span></p>
+<p class="p1"><span class="s1">in your anchor tag </span><span class="s3">href</span><span class="s1"> attribute. Needless to say, this is easy to forget, and is probably the single most common source of HTML validation errors in otherwise well-marked-up web sites.</span></p>
+<p class="p1"><span class="s1">Markdown allows you to use these characters naturally, taking care of all the necessary escaping for you. If you use an ampersand as part of an HTML entity, it remains unchanged; otherwise it will be translated into </span><span class="s3">&amp;amp;</span><span class="s1">.</span></p>
+<p class="p1"><span class="s1">So, if you want to include a copyright symbol in your article, you can write:</span></p>
+<p class="p3"><span class="s1">&amp;copy;</span></p>
+<p class="p1"><span class="s1">and Markdown will leave it alone. But if you write:</span></p>
+<p class="p3"><span class="s1">AT&amp;T</span></p>
+<p class="p1"><span class="s1">Markdown will translate it to:</span></p>
+<p class="p3"><span class="s1">AT&amp;amp;T</span></p>
+<p class="p1"><span class="s1">Similarly, because Markdown supports </span><span class="s2">inline HTML</span><span class="s1">, if you use angle brackets as delimiters for HTML tags, Markdown will treat them as such. But if you write:</span></p>
+<p class="p3"><span class="s1">4 &lt; 5</span></p>
+<p class="p1"><span class="s1">Markdown will translate it to:</span></p>
+<p class="p3"><span class="s1">4 &amp;lt; 5</span></p>
+<p class="p1"><span class="s1">However, inside Markdown code spans and blocks, angle brackets and ampersands are <i>always</i> encoded automatically. This makes it easy to use Markdown to write about HTML code. (As opposed to raw HTML, which is a terrible format for writing about HTML syntax, because every single </span><span class="s3">&lt;</span><span class="s1"> and </span><span class="s3">&amp;</span><span class="s1"> in your example code needs to be escaped.)</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Block Elements</b></span></h2>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Paragraphs and Line Breaks</b></span></h3>
+<p class="p1"><span class="s1">A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line — a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs.</span></p>
+<p class="p1"><span class="s1">The implication of the “one or more consecutive lines of text” rule is that Markdown supports “hard-wrapped” text paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type’s “Convert Line Breaks” option) which translate every line break character in a paragraph into a </span><span class="s3">&lt;br /&gt;</span><span class="s1"> tag.</span></p>
+<p class="p1"><span class="s1">When you <i>do</i> want to insert a </span><span class="s3">&lt;br /&gt;</span><span class="s1"> break tag using Markdown, you end a line with two or more spaces, then type return.</span></p>
+<p class="p1"><span class="s1">Yes, this takes a tad more effort to create a </span><span class="s3">&lt;br /&gt;</span><span class="s1">, but a simplistic “every line break is a </span><span class="s3">&lt;br /&gt;</span><span class="s1">” rule wouldn’t work for Markdown. Markdown’s email-style </span><span class="s2">blockquoting</span><span class="s1"> and multi-paragraph </span><span class="s2">list items</span><span class="s1"> work best — and look better — when you format them with hard breaks.</span></p>
+<p class="p1"><span class="s1">Markdown supports two styles of headers, <a href="http://docutils.sourceforge.net/mirror/setext.html"><span class="s2">Setext</span></a> and <a href="http://www.aaronsw.com/2002/atx/"><span class="s2">atx</span></a>.</span></p>
+<p class="p1"><span class="s1">Setext-style headers are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers). For example:</span></p>
+<p class="p3"><span class="s1">This is an H1</span></p>
+<p class="p3"><span class="s1">=============</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">This is an H2</span></p>
+<p class="p3"><span class="s1">-------------</span></p>
+<p class="p1"><span class="s1">Any number of underlining </span><span class="s3">=</span><span class="s1">’s or </span><span class="s3">-</span><span class="s1">’s will work.</span></p>
+<p class="p1"><span class="s1">Atx-style headers use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. For example:</span></p>
+<p class="p3"><span class="s1"># This is an H1</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">## This is an H2</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">###### This is an H6</span></p>
+<p class="p1"><span class="s1">Optionally, you may “close” atx-style headers. This is purely cosmetic — you can use this if you think it looks better. The closing hashes don’t even need to match the number of hashes used to open the header. (The number of opening hashes determines the header level.) :</span></p>
+<p class="p3"><span class="s1"># This is an H1 #</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">## This is an H2 ##</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">### This is an H3 ######</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Blockquotes</b></span></h3>
+<p class="p1"><span class="s1">Markdown uses email-style </span><span class="s3">&gt;</span><span class="s1"> characters for blockquoting. If you’re familiar with quoting passages of text in an email message, then you know how to create a blockquote in Markdown. It looks best if you hard wrap the text and put a </span><span class="s3">&gt;</span><span class="s1"> before every line:</span></p>
+<p class="p3"><span class="s1">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span></p>
+<p class="p3"><span class="s1">&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span></p>
+<p class="p3"><span class="s1">&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span></p>
+<p class="p3"><span class="s1">&gt;<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span></p>
+<p class="p3"><span class="s1">&gt; id sem consectetuer libero luctus adipiscing.</span></p>
+<p class="p1"><span class="s1">Markdown allows you to be lazy and only put the </span><span class="s3">&gt;</span><span class="s1"> before the first line of a hard-wrapped paragraph:</span></p>
+<p class="p3"><span class="s1">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span></p>
+<p class="p3"><span class="s1">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span></p>
+<p class="p3"><span class="s1">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span></p>
+<p class="p3"><span class="s1">id sem consectetuer libero luctus adipiscing.</span></p>
+<p class="p1"><span class="s1">Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of </span><span class="s3">&gt;</span><span class="s1">:</span></p>
+<p class="p3"><span class="s1">&gt; This is the first level of quoting.</span></p>
+<p class="p3"><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s1">&gt; &gt; This is nested blockquote.</span></p>
+<p class="p3"><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s1">&gt; Back to the first level.</span></p>
+<p class="p1"><span class="s1">Blockquotes can contain other Markdown elements, including headers, lists, and code blocks:</span></p>
+<p class="p3"><span class="s1">&gt; ## This is a header.</span></p>
+<p class="p3"><span class="s1">&gt;<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">&gt; 1. <span class="Apple-converted-space">  </span>This is the first list item.</span></p>
+<p class="p3"><span class="s1">&gt; 2. <span class="Apple-converted-space">  </span>This is the second list item.</span></p>
+<p class="p3"><span class="s1">&gt;<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">&gt; Here's some example code:</span></p>
+<p class="p3"><span class="s1">&gt;<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">&gt; <span class="Apple-converted-space">    </span>return shell_exec("echo $input | $markdown_script");</span></p>
+<p class="p1"><span class="s1">Any decent text editor should make email-style quoting easy. For example, with BBEdit, you can make a selection and choose Increase Quote Level from the Text menu.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Lists</b></span></h3>
+<p class="p1"><span class="s1">Markdown supports ordered (numbered) and unordered (bulleted) lists.</span></p>
+<p class="p1"><span class="s1">Unordered lists use asterisks, pluses, and hyphens — interchangably — as list markers:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Red</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Green</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Blue</span></p>
+<p class="p1"><span class="s1">is equivalent to:</span></p>
+<p class="p3"><span class="s1">+ <span class="Apple-converted-space">  </span>Red</span></p>
+<p class="p3"><span class="s1">+ <span class="Apple-converted-space">  </span>Green</span></p>
+<p class="p3"><span class="s1">+ <span class="Apple-converted-space">  </span>Blue</span></p>
+<p class="p1"><span class="s1">and:</span></p>
+<p class="p3"><span class="s1">- <span class="Apple-converted-space">  </span>Red</span></p>
+<p class="p3"><span class="s1">- <span class="Apple-converted-space">  </span>Green</span></p>
+<p class="p3"><span class="s1">- <span class="Apple-converted-space">  </span>Blue</span></p>
+<p class="p1"><span class="s1">Ordered lists use numbers followed by periods:</span></p>
+<p class="p3"><span class="s1">1.<span class="Apple-converted-space">  </span>Bird</span></p>
+<p class="p3"><span class="s1">2.<span class="Apple-converted-space">  </span>McHale</span></p>
+<p class="p3"><span class="s1">3.<span class="Apple-converted-space">  </span>Parish</span></p>
+<p class="p1"><span class="s1">It’s important to note that the actual numbers you use to mark the list have no effect on the HTML output Markdown produces. The HTML Markdown produces from the above list is:</span></p>
+<p class="p3"><span class="s1">&lt;ol&gt;</span></p>
+<p class="p3"><span class="s1">&lt;li&gt;Bird&lt;/li&gt;</span></p>
+<p class="p3"><span class="s1">&lt;li&gt;McHale&lt;/li&gt;</span></p>
+<p class="p3"><span class="s1">&lt;li&gt;Parish&lt;/li&gt;</span></p>
+<p class="p3"><span class="s1">&lt;/ol&gt;</span></p>
+<p class="p1"><span class="s1">If you instead wrote the list in Markdown like this:</span></p>
+<p class="p3"><span class="s1">1.<span class="Apple-converted-space">  </span>Bird</span></p>
+<p class="p3"><span class="s1">1.<span class="Apple-converted-space">  </span>McHale</span></p>
+<p class="p3"><span class="s1">1.<span class="Apple-converted-space">  </span>Parish</span></p>
+<p class="p1"><span class="s1">or even:</span></p>
+<p class="p3"><span class="s1">3. Bird</span></p>
+<p class="p3"><span class="s1">1. McHale</span></p>
+<p class="p3"><span class="s1">8. Parish</span></p>
+<p class="p1"><span class="s1">you’d get the exact same HTML output. The point is, if you want to, you can use ordinal numbers in your ordered Markdown lists, so that the numbers in your source match the numbers in your published HTML. But if you want to be lazy, you don’t have to.</span></p>
+<p class="p1"><span class="s1">If you do use lazy list numbering, however, you should still start the list with the number 1. At some point in the future, Markdown may support starting ordered lists at an arbitrary number.</span></p>
+<p class="p1"><span class="s1">List markers typically start at the left margin, but may be indented by up to three spaces. List markers must be followed by one or more spaces or a tab.</span></p>
+<p class="p1"><span class="s1">To make lists look nice, you can wrap items with hanging indents:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>viverra nec, fringilla in, laoreet vitae, risus.</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>Suspendisse id sem consectetuer libero luctus adipiscing.</span></p>
+<p class="p1"><span class="s1">But if you want to be lazy, you don’t have to:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></p>
+<p class="p3"><span class="s1">Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,</span></p>
+<p class="p3"><span class="s1">viverra nec, fringilla in, laoreet vitae, risus.</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.</span></p>
+<p class="p3"><span class="s1">Suspendisse id sem consectetuer libero luctus adipiscing.</span></p>
+<p class="p1"><span class="s1">If list items are separated by blank lines, Markdown will wrap the items in </span><span class="s3">&lt;p&gt;</span><span class="s1"> tags in the HTML output. For example, this input:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Bird</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Magic</span></p>
+<p class="p1"><span class="s1">will turn into:</span></p>
+<p class="p3"><span class="s1">&lt;ul&gt;</span></p>
+<p class="p3"><span class="s1">&lt;li&gt;Bird&lt;/li&gt;</span></p>
+<p class="p3"><span class="s1">&lt;li&gt;Magic&lt;/li&gt;</span></p>
+<p class="p3"><span class="s1">&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">But this:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Bird</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Magic</span></p>
+<p class="p1"><span class="s1">will turn into:</span></p>
+<p class="p3"><span class="s1">&lt;ul&gt;</span></p>
+<p class="p3"><span class="s1">&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;</span></p>
+<p class="p3"><span class="s1">&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;</span></p>
+<p class="p3"><span class="s1">&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:</span></p>
+<p class="p3"><span class="s1">1.<span class="Apple-converted-space">  </span>This is a list item with two paragraphs. Lorem ipsum dolor</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>sit amet, consectetuer adipiscing elit. Aliquam hendrerit</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>mi posuere lectus.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>Vestibulum enim wisi, viverra nec, fringilla in, laoreet</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>vitae, risus. Donec sit amet nisl. Aliquam semper ipsum</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>sit amet velit.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">2.<span class="Apple-converted-space">  </span>Suspendisse id sem consectetuer libero luctus adipiscing.</span></p>
+<p class="p1"><span class="s1">It looks nice if you indent every line of the subsequent paragraphs, but here again, Markdown will allow you to be lazy:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>This is a list item with two paragraphs.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>This is the second paragraph in the list item. You're</span></p>
+<p class="p3"><span class="s1">only required to indent the first line. Lorem ipsum dolor</span></p>
+<p class="p3"><span class="s1">sit amet, consectetuer adipiscing elit.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>Another item in the same list.</span></p>
+<p class="p1"><span class="s1">To put a blockquote within a list item, the blockquote’s </span><span class="s3">&gt;</span><span class="s1"> delimiters need to be indented:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>A list item with a blockquote:</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&gt; This is a blockquote</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&gt; inside a list item.</span></p>
+<p class="p1"><span class="s1">To put a code block within a list item, the code block needs to be indented <i>twice</i> — 8 spaces or two tabs:</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>A list item with a code block:</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;code goes here&gt;</span></p>
+<p class="p1"><span class="s1">It’s worth noting that it’s possible to trigger an ordered list by accident, by writing something like this:</span></p>
+<p class="p3"><span class="s1">1986. What a great season.</span></p>
+<p class="p1"><span class="s1">In other words, a <i>number-period-space</i> sequence at the beginning of a line. To avoid this, you can backslash-escape the period:</span></p>
+<p class="p3"><span class="s1">1986\. What a great season.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Code Blocks</b></span></h3>
+<p class="p1"><span class="s1">Pre-formatted code blocks are used for writing about programming or markup source code. Rather than forming normal paragraphs, the lines of a code block are interpreted literally. Markdown wraps a code block in both </span><span class="s3">&lt;pre&gt;</span><span class="s1"> and </span><span class="s3">&lt;code&gt;</span><span class="s1"> tags.</span></p>
+<p class="p1"><span class="s1">To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:</span></p>
+<p class="p3"><span class="s1">This is a normal paragraph:</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>This is a code block.</span></p>
+<p class="p1"><span class="s1">Markdown will generate:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;This is a normal paragraph:&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;pre&gt;&lt;code&gt;This is a code block.</span></p>
+<p class="p3"><span class="s1">&lt;/code&gt;&lt;/pre&gt;</span></p>
+<p class="p1"><span class="s1">One level of indentation — 4 spaces or 1 tab — is removed from each line of the code block. For example, this:</span></p>
+<p class="p3"><span class="s1">Here is an example of AppleScript:</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>tell application "Foo"</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>beep</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>end tell</span></p>
+<p class="p1"><span class="s1">will turn into:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;pre&gt;&lt;code&gt;tell application "Foo"</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>beep</span></p>
+<p class="p3"><span class="s1">end tell</span></p>
+<p class="p3"><span class="s1">&lt;/code&gt;&lt;/pre&gt;</span></p>
+<p class="p1"><span class="s1">A code block continues until it reaches a line that is not indented (or the end of the article).</span></p>
+<p class="p1"><span class="s1">Within a code block, ampersands (</span><span class="s3">&amp;</span><span class="s1">) and angle brackets (</span><span class="s3">&lt;</span><span class="s1"> and </span><span class="s3">&gt;</span><span class="s1">) are automatically converted into HTML entities. This makes it very easy to include example HTML source code using Markdown — just paste it and indent it, and Markdown will handle the hassle of encoding the ampersands and angle brackets. For example, this:</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="footer"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&amp;copy; 2004 Foo Corporation</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">will turn into:</span></p>
+<p class="p3"><span class="s1">&lt;pre&gt;&lt;code&gt;&amp;lt;div class="footer"&amp;gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&amp;amp;copy; 2004 Foo Corporation</span></p>
+<p class="p3"><span class="s1">&amp;lt;/div&amp;gt;</span></p>
+<p class="p3"><span class="s1">&lt;/code&gt;&lt;/pre&gt;</span></p>
+<p class="p1"><span class="s1">Regular Markdown syntax is not processed within code blocks. E.g., asterisks are just literal asterisks within a code block. This means it’s also easy to use Markdown to write about Markdown’s own syntax.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Horizontal Rules</b></span></h3>
+<p class="p1"><span class="s1">You can produce a horizontal rule tag (</span><span class="s3">&lt;hr /&gt;</span><span class="s1">) by placing three or more hyphens, asterisks, or underscores on a line by themselves. If you wish, you may use spaces between the hyphens or asterisks. Each of the following lines will produce a horizontal rule:</span></p>
+<p class="p3"><span class="s1">* * *</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">***</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">*****</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">- - -</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">---------------------------------------</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Span Elements</b></span></h2>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Links</b></span></h3>
+<p class="p1"><span class="s1">Markdown supports two style of links: <i>inline</i> and <i>reference</i>.</span></p>
+<p class="p1"><span class="s1">In both styles, the link text is delimited by [square brackets].</span></p>
+<p class="p1"><span class="s1">To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an <i>optional</i> title for the link, surrounded in quotes. For example:</span></p>
+<p class="p3"><span class="s1">This is [an example](http://example.com/ "Title") inline link.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">[This link](http://example.net/) has no title attribute.</span></p>
+<p class="p1"><span class="s1">Will produce:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;This is &lt;a href="http://example.com/" title="Title"&gt;</span></p>
+<p class="p3"><span class="s1">an example&lt;/a&gt; inline link.&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;p&gt;&lt;a href="http://example.net/"&gt;This link&lt;/a&gt; has no</span></p>
+<p class="p3"><span class="s1">title attribute.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">If you’re referring to a local resource on the same server, you can use relative paths:</span></p>
+<p class="p3"><span class="s1">See my [About](/about/) page for details.<span class="Apple-converted-space">   </span></span></p>
+<p class="p1"><span class="s1">Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:</span></p>
+<p class="p3"><span class="s1">This is [an example][id] reference-style link.</span></p>
+<p class="p1"><span class="s1">You can optionally use a space to separate the sets of brackets:</span></p>
+<p class="p3"><span class="s1">This is [an example] [id] reference-style link.</span></p>
+<p class="p1"><span class="s1">Then, anywhere in the document, you define your link label like this, on a line by itself:</span></p>
+<p class="p3"><span class="s1">[id]: http://example.com/<span class="Apple-converted-space">  </span>"Optional Title Here"</span></p>
+<p class="p1"><span class="s1">That is:</span></p>
+<ul class="ul1">
+  <li class="li7"><span class="s4"></span><span class="s1">Square brackets containing the link identifier (optionally indented from the left margin using up to three spaces);</span></li>
+  <li class="li7"><span class="s4"></span><span class="s1">followed by a colon;</span></li>
+  <li class="li7"><span class="s4"></span><span class="s1">followed by one or more spaces (or tabs);</span></li>
+  <li class="li7"><span class="s4"></span><span class="s1">followed by the URL for the link;</span></li>
+  <li class="li7"><span class="s4"></span><span class="s1">optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses.</span></li>
+</ul>
+<p class="p1"><span class="s1">The following three link definitions are equivalent:</span></p>
+<p class="p3"><span class="s1">[foo]: http://example.com/<span class="Apple-converted-space">  </span>"Optional Title Here"</span></p>
+<p class="p3"><span class="s1">[foo]: http://example.com/<span class="Apple-converted-space">  </span>'Optional Title Here'</span></p>
+<p class="p3"><span class="s1">[foo]: http://example.com/<span class="Apple-converted-space">  </span>(Optional Title Here)</span></p>
+<p class="p1"><span class="s1"><b>Note:</b> There is a known bug in Markdown.pl 1.0.1 which prevents single quotes from being used to delimit link titles.</span></p>
+<p class="p1"><span class="s1">The link URL may, optionally, be surrounded by angle brackets:</span></p>
+<p class="p3"><span class="s1">[id]: &lt;http://example.com/&gt;<span class="Apple-converted-space">  </span>"Optional Title Here"</span></p>
+<p class="p1"><span class="s1">You can put the title attribute on the next line and use extra spaces or tabs for padding, which tends to look better with longer URLs:</span></p>
+<p class="p3"><span class="s1">[id]: http://example.com/longish/path/to/resource/here</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>"Optional Title Here"</span></p>
+<p class="p1"><span class="s1">Link definitions are only used for creating links during Markdown processing, and are stripped from your document in the HTML output.</span></p>
+<p class="p1"><span class="s1">Link definition names may consist of letters, numbers, spaces, and punctuation — but they are <i>not</i> case sensitive. E.g. these two links:</span></p>
+<p class="p3"><span class="s1">[link text][a]</span></p>
+<p class="p3"><span class="s1">[link text][A]</span></p>
+<p class="p1"><span class="s1">are equivalent.</span></p>
+<p class="p1"><span class="s1">The <i>implicit link name</i> shortcut allows you to omit the name of the link, in which case the link text itself is used as the name. Just use an empty set of square brackets — e.g., to link the word “Google” to the google.com web site, you could simply write:</span></p>
+<p class="p3"><span class="s1">[Google][]</span></p>
+<p class="p1"><span class="s1">And then define the link:</span></p>
+<p class="p3"><span class="s1">[Google]: http://google.com/</span></p>
+<p class="p1"><span class="s1">Because link names may contain spaces, this shortcut even works for multiple words in the link text:</span></p>
+<p class="p3"><span class="s1">Visit [Daring Fireball][] for more information.</span></p>
+<p class="p1"><span class="s1">And then define the link:</span></p>
+<p class="p3"><span class="s1">[Daring Fireball]: http://daringfireball.net/</span></p>
+<p class="p1"><span class="s1">Link definitions can be placed anywhere in your Markdown document. I tend to put them immediately after each paragraph in which they’re used, but if you want, you can put them all at the end of your document, sort of like footnotes.</span></p>
+<p class="p1"><span class="s1">Here’s an example of reference links in action:</span></p>
+<p class="p3"><span class="s1">I get 10 times more traffic from [Google] [1] than from</span></p>
+<p class="p3"><span class="s1">[Yahoo] [2] or [MSN] [3].</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>[1]: http://google.com/<span class="Apple-converted-space">        </span>"Google"</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>[2]: http://search.yahoo.com/<span class="Apple-converted-space">  </span>"Yahoo Search"</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>[3]: http://search.msn.com/<span class="Apple-converted-space">    </span>"MSN Search"</span></p>
+<p class="p1"><span class="s1">Using the implicit link name shortcut, you could instead write:</span></p>
+<p class="p3"><span class="s1">I get 10 times more traffic from [Google][] than from</span></p>
+<p class="p3"><span class="s1">[Yahoo][] or [MSN][].</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>[google]: http://google.com/<span class="Apple-converted-space">        </span>"Google"</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>[yahoo]:<span class="Apple-converted-space">  </span>http://search.yahoo.com/<span class="Apple-converted-space">  </span>"Yahoo Search"</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>[msn]:<span class="Apple-converted-space">    </span>http://search.msn.com/<span class="Apple-converted-space">    </span>"MSN Search"</span></p>
+<p class="p1"><span class="s1">Both of the above examples will produce the following HTML output:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;I get 10 times more traffic from &lt;a href="http://google.com/"</span></p>
+<p class="p3"><span class="s1">title="Google"&gt;Google&lt;/a&gt; than from</span></p>
+<p class="p3"><span class="s1">&lt;a href="http://search.yahoo.com/" title="Yahoo Search"&gt;Yahoo&lt;/a&gt;</span></p>
+<p class="p3"><span class="s1">or &lt;a href="http://search.msn.com/" title="MSN Search"&gt;MSN&lt;/a&gt;.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">For comparison, here is the same paragraph written using Markdown’s inline link style:</span></p>
+<p class="p3"><span class="s1">I get 10 times more traffic from [Google](http://google.com/ "Google")</span></p>
+<p class="p3"><span class="s1">than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or</span></p>
+<p class="p3"><span class="s1">[MSN](http://search.msn.com/ "MSN Search").</span></p>
+<p class="p1"><span class="s1">The point of reference-style links is not that they’re easier to write. The point is that with reference-style links, your document source is vastly more readable. Compare the above examples: using reference-style links, the paragraph itself is only 81 characters long; with inline-style links, it’s 176 characters; and as raw HTML, it’s 234 characters. In the raw HTML, there’s more markup than there is text.</span></p>
+<p class="p1"><span class="s1">With Markdown’s reference-style links, a source document much more closely resembles the final output, as rendered in a browser. By allowing you to move the markup-related metadata out of the paragraph, you can add links without interrupting the narrative flow of your prose.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Emphasis</b></span></h3>
+<p class="p1"><span class="s1">Markdown treats asterisks (</span><span class="s3">*</span><span class="s1">) and underscores (</span><span class="s3">_</span><span class="s1">) as indicators of emphasis. Text wrapped with one </span><span class="s3">*</span><span class="s1"> or </span><span class="s3">_</span><span class="s1"> will be wrapped with an HTML </span><span class="s3">&lt;em&gt;</span><span class="s1"> tag; double </span><span class="s3">*</span><span class="s1">’s or </span><span class="s3">_</span><span class="s1">’s will be wrapped with an HTML </span><span class="s3">&lt;strong&gt;</span><span class="s1"> tag. E.g., this input:</span></p>
+<p class="p3"><span class="s1">*single asterisks*</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">_single underscores_</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">**double asterisks**</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">__double underscores__</span></p>
+<p class="p1"><span class="s1">will produce:</span></p>
+<p class="p3"><span class="s1">&lt;em&gt;single asterisks&lt;/em&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;em&gt;single underscores&lt;/em&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;strong&gt;double asterisks&lt;/strong&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;strong&gt;double underscores&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1">You can use whichever style you prefer; the lone restriction is that the same character must be used to open and close an emphasis span.</span></p>
+<p class="p1"><span class="s1">Emphasis can be used in the middle of a word:</span></p>
+<p class="p3"><span class="s1">un*frigging*believable</span></p>
+<p class="p1"><span class="s1">But if you surround an </span><span class="s3">*</span><span class="s1"> or </span><span class="s3">_</span><span class="s1"> with spaces, it’ll be treated as a literal asterisk or underscore.</span></p>
+<p class="p1"><span class="s1">To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:</span></p>
+<p class="p3"><span class="s1">\*this text is surrounded by literal asterisks\*</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Code</b></span></h3>
+<p class="p1"><span class="s1">To indicate a span of code, wrap it with backtick quotes (</span><span class="s3">`</span><span class="s1">). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</span></p>
+<p class="p3"><span class="s1">Use the `printf()` function.</span></p>
+<p class="p1"><span class="s1">will produce:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">To include a literal backtick character within a code span, you can use multiple backticks as the opening and closing delimiters:</span></p>
+<p class="p3"><span class="s1">``There is a literal backtick (`) here.``</span></p>
+<p class="p1"><span class="s1">which will produce this:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">The backtick delimiters surrounding a code span may include spaces — one after the opening, one before the closing. This allows you to place literal backtick characters at the beginning or end of a code span:</span></p>
+<p class="p3"><span class="s1">A single backtick in a code span: `` ` ``</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">A backtick-delimited string in a code span: `` `foo` ``</span></p>
+<p class="p1"><span class="s1">will produce:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">With a code span, ampersands and angle brackets are encoded as HTML entities automatically, which makes it easy to include example HTML tags. Markdown will turn this:</span></p>
+<p class="p3"><span class="s1">Please don't use any `&lt;blink&gt;` tags.</span></p>
+<p class="p1"><span class="s1">into:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;Please don't use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">You can write this:</span></p>
+<p class="p3"><span class="s1">`&amp;#8212;` is the decimal-encoded equivalent of `&amp;mdash;`.</span></p>
+<p class="p1"><span class="s1">to produce:</span></p>
+<p class="p3"><span class="s1">&lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded</span></p>
+<p class="p3"><span class="s1">equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Images</b></span></h3>
+<p class="p1"><span class="s1">Admittedly, it’s fairly difficult to devise a “natural” syntax for placing images into a plain text document format.</span></p>
+<p class="p1"><span class="s1">Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: <i>inline</i> and <i>reference</i>.</span></p>
+<p class="p1"><span class="s1">Inline image syntax looks like this:</span></p>
+<p class="p3"><span class="s1">![Alt text](/path/to/img.jpg)</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">![Alt text](/path/to/img.jpg "Optional title")</span></p>
+<p class="p1"><span class="s1">That is:</span></p>
+<ul class="ul1">
+  <li class="li7"><span class="s4"></span><span class="s1">An exclamation mark: </span><span class="s3">!</span><span class="s1">;</span></li>
+  <li class="li7"><span class="s4"></span><span class="s1">followed by a set of square brackets, containing the </span><span class="s3">alt</span><span class="s1"> attribute text for the image;</span></li>
+  <li class="li7"><span class="s4"></span><span class="s1">followed by a set of parentheses, containing the URL or path to the image, and an optional </span><span class="s3">title</span><span class="s1"> attribute enclosed in double or single quotes.</span></li>
+</ul>
+<p class="p1"><span class="s1">Reference-style image syntax looks like this:</span></p>
+<p class="p3"><span class="s1">![Alt text][id]</span></p>
+<p class="p1"><span class="s1">Where “id” is the name of a defined image reference. Image references are defined using syntax identical to link references:</span></p>
+<p class="p3"><span class="s1">[id]: url/to/image<span class="Apple-converted-space">  </span>"Optional title attribute"</span></p>
+<p class="p1"><span class="s1">As of this writing, Markdown has no syntax for specifying the dimensions of an image; if this is important to you, you can simply use regular HTML </span><span class="s3">&lt;img&gt;</span><span class="s1"> tags.</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Miscellaneous</b></span></h2>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Automatic Links</b></span></h3>
+<p class="p1"><span class="s1">Markdown supports a shortcut style for creating “automatic” links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to show the actual text of a URL or email address, and also have it be a clickable link, you can do this:</span></p>
+<p class="p3"><span class="s1">&lt;http://example.com/&gt;</span></p>
+<p class="p1"><span class="s1">Markdown will turn this into:</span></p>
+<p class="p3"><span class="s1">&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">Automatic links for email addresses work similarly, except that Markdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots. For example, Markdown will turn this:</span></p>
+<p class="p3"><span class="s1">&lt;address@example.com&gt;</span></p>
+<p class="p1"><span class="s1">into something like this:</span></p>
+<p class="p3"><span class="s1">&lt;a href="&amp;#x6D;&amp;#x61;i&amp;#x6C;&amp;#x74;&amp;#x6F;:&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;</span></p>
+<p class="p3"><span class="s1">&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;</span></p>
+<p class="p3"><span class="s1">&amp;#109;"&gt;&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;</span></p>
+<p class="p3"><span class="s1">&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">which will render in a browser as a clickable link to “address@example.com”.</span></p>
+<p class="p1"><span class="s1">(This sort of entity-encoding trick will indeed fool many, if not most, address-harvesting bots, but it definitely won’t fool all of them. It’s better than nothing, but an address published in this way will probably eventually start receiving spam.)</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Backslash Escapes</b></span></h3>
+<p class="p1"><span class="s1">Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax. For example, if you wanted to surround a word with literal asterisks (instead of an HTML </span><span class="s3">&lt;em&gt;</span><span class="s1"> tag), you can use backslashes before the asterisks, like this:</span></p>
+<p class="p3"><span class="s1">\*literal asterisks\*</span></p>
+<p class="p1"><span class="s1">Markdown provides backslash escapes for the following characters:</span></p>
+<p class="p3"><span class="s1">\ <span class="Apple-converted-space">  </span>backslash</span></p>
+<p class="p3"><span class="s1">` <span class="Apple-converted-space">  </span>backtick</span></p>
+<p class="p3"><span class="s1">* <span class="Apple-converted-space">  </span>asterisk</span></p>
+<p class="p3"><span class="s1">_ <span class="Apple-converted-space">  </span>underscore</span></p>
+<p class="p3"><span class="s1">{}<span class="Apple-converted-space">  </span>curly braces</span></p>
+<p class="p3"><span class="s1">[]<span class="Apple-converted-space">  </span>square brackets</span></p>
+<p class="p3"><span class="s1">()<span class="Apple-converted-space">  </span>parentheses</span></p>
+<p class="p3"><span class="s1"># <span class="Apple-converted-space">  </span>hash mark</span></p>
+<p class="p3"><span class="s1">+ <span class="Apple-converted-space">  </span>plus sign</span></p>
+<p class="p3"><span class="s1">- <span class="Apple-converted-space">  </span>minus sign (hyphen)</span></p>
+<p class="p3"><span class="s1">. <span class="Apple-converted-space">  </span>dot</span></p>
+<p class="p3"><span class="s1">! <span class="Apple-converted-space">  </span>exclamation mark</span></p>
+</body>
+</html>
