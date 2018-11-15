@@ -1,8 +1,7 @@
-// Studio60 -
+// Studio60 - GULPFILE.js - hugo ssg
 var gulp         = require("gulp"),
     sass         = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
-    hash         = require("gulp-hash"),
     del          = require("del"),
     runSequence  = require('run-sequence'),
     cp           = require('child_process'),
@@ -12,14 +11,10 @@ var gulp         = require("gulp"),
 gulp.task("scss", function () {
     //effacement des vieux fichiers css eventuels
     del.sync(["static/css/**/*"]);
-    //hash css Compilation
-    gulp.src("assets/sass/**/*.scss")
+    gulp.src("src/sass/**/*.scss")
         .pipe(sass({outputStyle : "compressed"}))
         .pipe(autoprefixer({browsers : ["last 20 versions"]}))
-        .pipe(hash())
         .pipe(gulp.dest("static/css"))
-        //Create a hash map
-        .pipe(hash.manifest("hash.json"))
         //Put the map in the data directory
         .pipe(gulp.dest("data/css"));
 });
@@ -27,28 +22,24 @@ gulp.task("scss", function () {
 // Hash images compilation
 gulp.task("images", function () {
     del(["static/images/**/*"])
-    gulp.src("assets/images/**/*")
-        .pipe(hash())
+    gulp.src("src/images/**/*")
         .pipe(gulp.dest("static/images"))
-        .pipe(hash.manifest("hash.json"))
         .pipe(gulp.dest("data/images"));
 });
 
 // Hash javascript compilation
 gulp.task("js", function () {
     del(["static/js/**/*"])
-    gulp.src("assets/js/**/*")
-        .pipe(hash())
+    gulp.src("src/js/**/*")
         .pipe(gulp.dest("static/js"))
-        .pipe(hash.manifest("hash.json"))
-        .pipe(gulp.dest("data/images"));
+        .pipe(gulp.dest("data/js"));
 });
 
-// Watch asset folder for changes
+// Watch src folder for changes
 gulp.task("watch", ["scss", "images", "js"], function () {
-    gulp.watch("assets/sass/**/*", ["scss"]);
-    gulp.watch("assets/images/**/*", ["images"]);
-    gulp.watch("assets/js/**/*", ["js"]);
+    gulp.watch("src/sass/**/*", ["scss"]);
+    gulp.watch("src/images/**/*", ["images"]);
+    gulp.watch("src/js/**/*", ["js"]);
 });
 
 gulp.task("build", () => {
