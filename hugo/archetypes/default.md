@@ -2,7 +2,7 @@
 title= "{{ replace .Name "-" " " | title }}"
 date= {{ .Date }}
 draft= false
-author= "theStudioSixty"
+author= "Studio60"
 description = ""
 categories = [""]
 tags = [""]
