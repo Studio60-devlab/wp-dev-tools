@@ -1,0 +1,54 @@
+$section-height:100vh;
+
+///*$spacer-x: 1rem;$spacer-y: 1vh;*/
+//$_10vh_h{height: $_10vh_h * 1 ;}
+$_1vh_h: 1vh;
+$_5vh_h: 5 * $_1vh_h;
+$_10vh_h: 10 * $_1vh_h;
+$_20vh_h : $_10vh_h * 2;
+$_30vh_h : $_10vh_h * 3;
+$_40vh_h : $_10vh_h * 4 ;
+$_50vh_h : $_10vh_h * 5 ;
+$_100vh_h : $_10vh_h * 10 ;
+
+._5vh_h{height: $_5vh_h!important;}
+._10vh_h{height: $_10vh_h!important;}
+._20vh_h{height: $_20vh_h!important;}
+._30vh_h{height: $_30vh_h!important;}
+._40vh_h{height: $_40vh_h!important;}
+._50vh_h{height: $_50vh_h!important;}
+._100vh_h{height: $_100vh_h!important;}
+._90vh_h{height: $_50vh_h + $_40vh_h !important;}
+._80vh_h{height: $_40vh_h + $_40vh_h !important;}
+._70vh_h{height: $_30vh_h + $_40vh_h !important;}
+._60vh_h{height: $_30vh_h + $_30vh_h !important;}
+
+$_1vw_w: 1vw;
+$_5vw_w: 5 * $_1vw_w;
+$_10vw_w: 10 * $_1vw_w;
+$_20vw_w : $_10vw_w * 2;
+$_30vw_w : $_10vw_w * 3;
+$_40vw_w : $_10vw_w * 4 ;
+$_50vw_w : $_10vw_w * 5 ;
+$_100vw_w : $_10vw_w * 10 ;
+
+._10vw_w{width: $_10vw_w!important;}
+._20vw_w{width: $_20vw_w!important;}
+._30vw_w{width: $_30vw_w!important;}
+._40vw_w{width: $_40vw_w!important;}
+._50vw_w{width: $_50vw_w!important;}
+._100vw_w{width: $_100vw_w!important;}
+._90vw_w{width: $_50vw_w + $_40vw_w !important;}
+._80vw_w{width: $_40vw_w + $_40vw_w !important;}
+._70vw_w{width: $_30vw_w + $_40vw_w !important;}
+._60vw_w{width: $_30vw_w + $_30vw_w !important;}
+
+@media only screen and (max-width:768px) {
+  $_1vh_h:1%;
+  $_1vw_w:1%;
+}
+.object-fit_fill { object-fit: fill }
+.object-fit_contain { object-fit: contain }
+.object-fit_cover { object-fit: cover }
+.object-fit_none { object-fit: none }
+.object-fit_scale-down { object-fit: scale-down }
