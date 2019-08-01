@@ -18,24 +18,15 @@ mkdir assets/js/dev/
 mkdir assets/js/dist/
 
 mkdir assets/sass/
-mkdir assets/sass/flex/
-mkdir assets/sass/layout/
-mkdir assets/sass/partials/
 
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/style.scss > assets/sass/style.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/_variables.scss > assets/sass/_variables.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/_styles.scss > assets/sass/_styles.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/_base.scss > assets/sass/_base.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_content.scss > assets/sass/flex/_content.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_cta.scss > assets/sass/flex/_cta.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_gallery.scss > assets/sass/flex/_gallery.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/flex/_video.scss > assets/sass/flex/_video.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/layout/_footer.scss > assets/sass/layout/_footer.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/layout/_header.scss > assets/sass/layout/_header.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/layout/_menu.scss > assets/sass/layout/_menu.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/partials/_btn.scss > assets/sass/partials/_btn.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/partials/_hero.scss > assets/sass/partials/_hero.scss
-curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/wordpress/gulp/assets/sass/partials/_tile.scss > assets/sass/partials/_tile.scss
+
+
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/bootstrap_reset/main.scss > assets/sass/style.scss
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/bootstrap_reset/color_system.scss > assets/sass/color_system.scss
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/bootstrap_reset/custom_variables.scss > assets/sass/custom_variables.scss
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/bootstrap_reset/geometry_system.scss > assets/sass/geometry_system.scss
+curl --silent https://raw.githubusercontent.com/theStudio60/webdev-tools/master/bootstrap_reset/typography_system.scss > assets/sass/typography_system.scss
+
 
 mkdir trash/
   mv LICENSE trash/
