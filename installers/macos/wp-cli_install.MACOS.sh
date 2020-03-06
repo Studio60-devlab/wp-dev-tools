@@ -7,7 +7,6 @@
 #
 # Author : Fabien Dupont
 # https://github.com/fabien-dupont
-#
 ########################## 
 clear ;
 echo 'Downloading wp-cli...' &&
