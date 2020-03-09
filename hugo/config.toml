@@ -1,0 +1,116 @@
+#
+# This is an already prepared config.toml
+# 
+# Author : Fabien Dupont 
+# Email : fab.d1987@yandex.com
+# Github : https://github.com/fabien-dupont 
+#
+baseurl = "/"
+languageCode = "en-us"
+MetaDataFormat = "toml"
+###
+#
+# Website main infos
+#
+###
+title="My hugo static website"
+subtitle = "hello world"
+description="This website is awesome"
+enableRobotsTXT = true
+enableGitInfo = false
+author = "Fabien Dupont"
+#canonifyurls = true
+#uglyurls = true
+summaryLength = 110
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+
+# Multilangues setup
+DefaultContentLanguage = "en"
+# Renders the default content language in subdir, e.g. /en/. The root directory / will redirect to /en/
+defaultContentLanguageInSubdir = true
+
+
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+[Params]
+metadescription="This website is awesome"
+metakeywords="hugo, website, static, fabien dupont"
+metaauthor="Fabien Dupont"
+# google analytics tracking id
+googleAnalytics = " "
+#googleSiteVerification=" "
+
+logo = "img/logo.svg"
+contact_phone = " "
+# contact_mail = "loremipsum@mail.com" # we prefer using an email obfuscator 
+
+ facebook = "https://www.facebook.com/ "
+ twitter = "https://twitter.com/"
+ instagram = "https://www.instagram.com/"  
+
+[[Params.languages]]
+ code = "fr"
+[[Params.languages]]
+ code = "en"
+[Languages]
+## 1 - FRANCAIS
+  [Languages.fr]
+    weight = 1
+    languageCode = "fr-fr"
+    title="Mon site web hugo statique "
+    subtitle = "hello world"
+    description="Ce site web génial a été développé avec hugo, le générateur de sites statiques."
+    dateFormat = "2 January 2006"
+    menufixed = true
+
+## 2 - ENGLISH
+  [Languages.en]
+    weight = 2
+    languageCode = "en-us"
+    title="My hugo static website"
+    subtitle = "hello world"
+    description="This website is awesome"
+    dateFormat = "January 2, 2006"
+    menufixed = true
+
+
+[menu]
+### en-us
+  [[Languages.en.menu.main]]
+    name = "home"
+    url = "/en"
+    weight = -300
+  [[Languages.en.menu.main]]
+    name = "About"
+    url = "/en/about"
+    weight = -298
+  [[Languages.en.menu.main]]
+    name = "Contact"
+    url = "/en/contact"
+    weight = -292
+### fr-fr
+  [[Languages.fr.menu.main]]
+    name = "accueil"
+    url = "/fr"
+    weight = -300
+  [[Languages.fr.menu.main]]
+    name = "à propos"
+    url = "/fr/about"
+    weight = -298
+  [[Languages.fr.menu.main]]
+    name = "Contact"
+    url = "/fr/contact"
+    weight = -292
+
+#[[menu.main]]
+#  name = "Howto"
+#  url = "howto"
+#  weight = -290
