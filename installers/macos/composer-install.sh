@@ -1,0 +1,2 @@
+cd ~ ;
+brew install composer;
