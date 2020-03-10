@@ -1,0 +1,1 @@
+ cd ~ ; xcode-select --install
